@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.validation.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="robot.network.server.ServerConsoleController">
+   <center>
+      <VBox fx:id="vbDisplay" maxWidth="400.0" minHeight="225.0" minWidth="400.0" prefWidth="400.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <Pane maxHeight="75.0" maxWidth="400.0" minHeight="75.0" minWidth="400.0" prefHeight="75.0" prefWidth="400.0" style="-fx-background-color: #353535;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="75.0" maxWidth="400.0" minHeight="75.0" minWidth="400.0" prefHeight="75.0" prefWidth="400.0" style="-fx-background-color: #353535;" text="CONSOLE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

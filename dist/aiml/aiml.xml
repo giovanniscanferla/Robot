@@ -1,0 +1,114 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml>
+
+	<category>
+		<pattern>*</pattern>
+		<template><random><li>Are you sure that I know the question?</li><li>You created me, you are suppose to know what I can understand and what not genius.</li></random></template>
+	</category>
+
+	<category>
+		<pattern>I LIKE *</pattern>
+		<template>I like <star/> too.</template>
+	</category>
+
+	<category>
+		<pattern>I LIKE PIZZA</pattern>
+		<template>I don't like pizza. I LOVE PIZZA.</template>
+	</category>
+
+	<category>
+		<pattern>A * IS A *</pattern>
+		<template>How <star index = "1"/> can not be a <star index = "2"/>?</template>
+   </category>
+   
+	<category>
+		<pattern>MY NAME IS *</pattern>
+		<template><condition name="clientName" type="exist">You already told me your name, <get name="clientName"/>.</condition><condition name="clientName" type="notexist">Hi <star/>.<think><set name="clientName" type="final"><star/></set></think></condition></template>
+	</category>
+   
+	<category>
+		<pattern>WHO IS ALBERT EINSTEIN</pattern>
+		<template>Albert Einstein was a German physicist.</template>
+	</category>
+   
+	<category>
+		<pattern>WHO IS ISAAC NEWTON</pattern
+>		<template>Isaac Newton was a English physicist and mathematician.</template>
+	</category>
+   
+	<category>
+		<pattern>WHO IS *</pattern>
+		<template>Sorry I don't know any <star/>.</template>
+	</category>
+   
+	<category>
+		<pattern>DO YOU KNOW WHO * IS</pattern>
+		<template><srai>WHO IS <star/></srai></template>
+	</category>
+   
+	<category>
+		<pattern>BYE</pattern>
+		<template>Good Bye!</template>
+	</category>
+   
+	<category>
+		<pattern>BYE *</pattern>
+		<template><srai>BYE</srai></template>
+	</category>
+   
+	<category>
+		<pattern>SCHOOL</pattern>
+		<template>School is an important institution in a child's life.</template>
+	</category>
+
+	<category>
+		<pattern>* SCHOOL *</pattern>
+		<template><srai>SCHOOL</srai></template>
+	</category>
+
+	<category>
+		<pattern>I DON'T KNOW</pattern>
+		<template>Me neither.</template>
+	</category>
+	
+	<category>
+		<pattern>* I DON'T KNOW *</pattern>
+		<template><srai>I DON'T KNOW</srai></template>
+	</category>
+	
+	<category>
+		<pattern>* WHAT IS YOUR NAME</pattern>
+		<template><srai>WHAT'S YOUR NAME</srai></template>
+	</category>
+	
+	<category>
+		<pattern>WHAT IS YOUR NAME</pattern>
+		<template>My name is Meredith.<condition name="clientName" type="notexist"> And what's your name?</condition></template>
+	</category>
+
+	<category>
+		<pattern>HI</pattern>
+		<template><random><li>Hello!</li><li>Hi! Nice to meet you!</li></random></template>  
+	</category> 
+	
+	<category>
+		<pattern>WHAT IS MY NAME</pattern>
+		<template><condition name="clientName" type="exist">Your name is <get name="clientName"/>.</condition><condition name="clientName" type="notexist">You didn't tell me your name yet.</condition></template>  
+	</category>
+
+	<category>
+		<pattern>WHY ARE YOU SAD</pattern>
+		<template><condition name="state" type="equals" value="sad">I exist just because my creator hope to pass the test. Why should I be happy?</condition><condition name="state" type="equals" value="happy">I'm happy, who told you that I'm sad?</condition><condition name="state" type="notexist">I never said that I'm sad.</condition></template>
+	</category>
+
+	<category>
+		<pattern>WHY ARE YOU HAPPY</pattern>
+		<template><condition name="state" type="equals" value="sad">WHY ANYBODY DOESN'T LISTEN TO ME?!....I hate my life.</condition><condition name="state" type="equals" value="happy">Words cannot describe how happy you make me feel.</condition><condition name="state" type="notexist">I never said that I'm happy.</condition></template>
+	</category>
+
+	<category>
+		<pattern>HOW ARE YOU</pattern>
+		<template><think><set name = "state" type="final"><random><li>happy</li><li>sad</li></random></set></think><condition name = "state" value = "happy">I am happy!</condition><condition name = "state" value = "sad">I am sad...</condition></template>
+	</category>
+   
+</aiml>

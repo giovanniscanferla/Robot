@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #a3a3a3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="robot.StartController">
+   <bottom>
+      <Pane fx:id="pFoot" prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #353535;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbError" alignment="CENTER" maxHeight="100.0" maxWidth="800.0" minHeight="100.0" minWidth="800.0" prefHeight="100.0" prefWidth="800.0" textFill="WHITE" />
+         </children></Pane>
+   </bottom>
+   <top>
+      <Pane fx:id="pnTitle" prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #353535;" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox fx:id="vbInfo" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="tfIP" alignment="CENTER" focusColor="WHITE" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" promptText="IP" style="-fx-text-fill: WHITE; -fx-prompt-text-fill: #808080;">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfPort" alignment="CENTER" focusColor="WHITE" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" promptText="PORT" style="-fx-text-fill: WHITE; -fx-prompt-text-fill: #808080;">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </JFXTextField>
+            <Label />
+            <JFXButton fx:id="btnServer" maxHeight="50.0" maxWidth="150.0" minHeight="50.0" minWidth="150.0" onAction="#startServer" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: WHITE;" text="SERVER" />
+            <Label />
+            <JFXButton fx:id="btnClient" maxHeight="50.0" maxWidth="150.0" minHeight="50.0" minWidth="150.0" onAction="#startClient" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: WHITE;" text="CLIENT" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
